@@ -164,3 +164,4 @@ news
 tokenizer_10k.pkl
 tutorials/test.txt
 tutorials/train.txt
+count_model.pkl
