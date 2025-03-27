@@ -1,17 +1,20 @@
 # coding=utf-8
 import torch
 import torch.nn as nn
+from torch.utils.data import Dataset, DataLoader
 
 
 class ElmanRnnUnit(nn.Module):
     def __init__(self, embedding_dim):
         super().__init__()
+        # 初始化：随机数与0
         self.Uh = nn.Parameter(torch.randn(embedding_dim, embedding_dim))
         self.Wh = nn.Parameter(torch.randn(embedding_dim, embedding_dim))
         self.b = nn.Parameter(torch.zeros(embedding_dim))
 
     def forward(self, x, h):
         # x and h both have shape: (batch_size, embedding_dim)
+        # 实现的是每一个 step 的计算
         return torch.tanh(x @ self.Wh + h @ self.Uh + self.b)
 
 
@@ -64,3 +67,9 @@ class RecurrentLanguageModel(nn.Module):
         return logits
 
 
+class JsonDataset(Dataset):
+    pass
+
+
+# model = RecurrentLanguageModel()
+# model.train()
