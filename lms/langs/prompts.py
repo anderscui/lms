@@ -32,3 +32,9 @@ simple_prompt = prompt_template.format(adj='fantastic', topic='programmer')
 print(simple_prompt)
 
 # MessagesPlaceholder
+
+#
+template = """Please answer this question: {input_prompt}"""
+prompt = PromptTemplate(template=template, input_variables=['input_prompt'])
+print(prompt.format(input_prompt='What is 1 + 1?'))
+# print(prompt.format({'input_prompt': 'What is 1 + 1?'}))
