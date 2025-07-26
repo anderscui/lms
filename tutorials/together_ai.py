@@ -46,7 +46,7 @@ llm = ChatTogether(
 # prompt = ChatPromptTemplate.from_messages(
 #     [
 #         # ('system', 'You are a professional translator, translate the user input from {input_lang} to {output_lang}.'),
-#         ('system', '你也是一个很伟大的译者，请将用户输入从 {input_lang} 翻译为 {output_lang}.'),
+#         ('system', '你是一个很伟大的译者，请将用户输入从 {input_lang} 翻译为 {output_lang}.'),
 #         ('human', '{input}')
 #     ]
 # )
@@ -63,7 +63,7 @@ llm = ChatTogether(
 prompt = ChatPromptTemplate.from_messages(
     [
         # ('system', 'You are a professional translator, translate the user input from {input_lang} to {output_lang}.'),
-        ('system', '你也是一个很出色的编辑，请找出下面文字中的语法和拼写错误.'),
+        ('system', '你是一个很出色的编辑，请找出下面文字中的语法和拼写错误.'),
         ('human', '{input}')
     ]
 )
